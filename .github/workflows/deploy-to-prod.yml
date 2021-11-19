@@ -5,37 +5,8 @@ name: release-solution-to-prod
 
 on:
   workflow_dispatch:
-    inputs:
-      # Change this value
-      solution_name:
-        description: 'name of the solution to worked on from Power Platform'
-        required: true
-        default: ALMLab
-       #Do Not change these values
-      solution_shipping_folder:
-        description: 'folder name for staging the exported solution *do not change*'
-        required: true
-        default: out/ship/
-      solution_outbound_folder:
-        description: 'staging the unpacked solution folder before check-in *do not change*'
-        required: true
-        default: out/solutions/
-      solution_source_folder:
-       description: 'folder name to be created and checked in *do not change*'
-       required: true
-       default: solutions/
-      solution_release_folder:
-       description: 'folder where the released binaries are going to be hosted *do not change*'
-       required: true
-       default: out/release
   release:
     types: [created]
-
-env:
-#edit your values here
-  BUILD_ENVIRONMENT_URL: org1e38c0e7.crm4.dynamics.com
-  PRODUCTION_ENVIRONMENT_URL: orgc1edf020.crm.dynamics.com
-  USERNAME: admin@CRM339195.onmicrosoft.com
 
 jobs:
   convert-to-managed:
@@ -51,35 +22,35 @@ jobs:
     - name: Pack solution
       uses: microsoft/powerplatform-actions/pack-solution@v0
       with:
-        solution-folder: ${{ github.event.inputs.solution_source_folder}}/${{ github.event.inputs.solution_name }}
-        solution-file: ${{ github.event.inputs.solution_outbound_folder}}/${{ github.event.inputs.solution_name }}.zip
+        solution-folder: solutions/ALMLab
+        solution-file: out/solutions/ALMLab.zip
         solution-type: Unmanaged
 
     - name: Import solution as unmanaged to build env
-      uses: microsoft/powerplatform-actions/import-solution@latest
+      uses: microsoft/powerplatform-actions/import-solution@v0
       with:
-        environment-url: ${{env.BUILD_ENVIRONMENT_URL}}
-        user-name: ${{env.USERNAME}}
+        environment-url: 'https://org309eba8c.crm4.dynamics.com'
+        user-name: 'admin@CRM339195.onmicrosoft.com'
         password-secret: ${{ secrets.password }}
-        solution-file: ${{ github.event.inputs.solution_outbound_folder}}/${{ github.event.inputs.solution_name }}.zip
+        solution-file: out/solutions/ALMLab.zip
         force-overwrite: true
         publish-changes: true
 
     - name: Export solution as managed
-      uses: microsoft/powerplatform-actions/export-solution@latest
+      uses: microsoft/powerplatform-actions/export-solution@v0
       with:
-        environment-url: ${{env.BUILD_ENVIRONMENT_URL}}
-        user-name: ${{env.USERNAME}}
+        environment-url: 'org1e38c0e7.crm4.dynamics.comm'
+        user-name: 'admin@CRM339195.onmicrosoft.com'
         password-secret: ${{ secrets.password }}
-        solution-name: ${{ github.event.inputs.solution_name }}
+        solution-name: ALMLab
         managed: true
-        solution-output-file: ${{ github.event.inputs.solution_shipping_folder}}/${{ github.event.inputs.solution_name }}.zip
+        solution-output-file: out/ship/ALMLab.zip
 
     - name: Upload the ready to ship solution to GH artifact store
       uses: actions/upload-artifact@v2
       with:
         name: managedSolutions
-        path: ${{ github.event.inputs.solution_shipping_folder}}/${{ github.event.inputs.solution_name }}.zip
+        path: out/ship/ALMLab.zip
 
   release-to-staging:
     needs: [ convert-to-managed ]
@@ -99,11 +70,11 @@ jobs:
         path: out/release/
 
     - name: Import solution to prod env
-      uses: microsoft/powerplatform-actions/import-solution@latest
+      uses: microsoft/powerplatform-actions/import-solution@v0
       with:
-        environment-url: ${{env.PRODUCTION_ENVIRONMENT_URL}}
-        user-name: ${{env.USERNAME}}
+        environment-url: 'https://orgc1edf020.crm.dynamics.com'
+        user-name: 'admin@CRM339195.onmicrosoft.com'
         password-secret: ${{ secrets.password }}
-        solution-file: ${{ github.event.inputs.solution_release_folder}}/${{ github.event.inputs.solution_name }}.zip
+        solution-file: out/release/ALMLab.zip
         force-overwrite: true
         publish-changes: true
