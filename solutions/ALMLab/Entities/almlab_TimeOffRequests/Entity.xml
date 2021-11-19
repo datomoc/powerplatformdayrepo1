@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Name LocalizedName="Time Off Requests" OriginalName="Time Off Requests">almlab_TimeOffRequests</Name>
+  <Name LocalizedName="Time off requests" OriginalName="Time off requests">almlab_Timeoffrequests</Name>
   <EntityInfo>
-    <entity Name="almlab_TimeOffRequests">
+    <entity Name="almlab_Timeoffrequests">
       <LocalizedNames>
-        <LocalizedName description="Time Off Requests" languagecode="1033" />
+        <LocalizedName description="Time off requests" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="Time Off Requests" languagecode="1033" />
+        <LocalizedCollectionName description="Time off requests" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
         <Description description="" languagecode="1033" />
@@ -54,7 +54,7 @@
             <Description description="" languagecode="1033" />
           </Descriptions>
         </attribute>
-        <attribute PhysicalName="almlab_TimeOffRequestsId">
+        <attribute PhysicalName="almlab_TimeoffrequestsId">
           <Type>primarykey</Type>
           <Name>almlab_timeoffrequestsid</Name>
           <LogicalName>almlab_timeoffrequestsid</LogicalName>
@@ -85,7 +85,7 @@
           <IsRetrievable>1</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
           <displaynames>
-            <displayname description="Time Off Requests" languagecode="1033" />
+            <displayname description="Time off requests" languagecode="1033" />
           </displaynames>
           <Descriptions>
             <Description description="Unique identifier for entity instances" languagecode="1033" />
@@ -604,7 +604,7 @@
               <displayname description="Status" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Status of the Time Off Requests" languagecode="1033" />
+              <Description description="Status of the Time off requests" languagecode="1033" />
             </Descriptions>
             <states>
               <state value="0" defaultstatus="1" invariantname="Active">
@@ -623,7 +623,7 @@
             <displayname description="Status" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Status of the Time Off Requests" languagecode="1033" />
+            <Description description="Status of the Time off requests" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="statuscode">
@@ -664,7 +664,7 @@
               <displayname description="Status Reason" languagecode="1033" />
             </displaynames>
             <Descriptions>
-              <Description description="Reason for the status of the Time Off Requests" languagecode="1033" />
+              <Description description="Reason for the status of the Time off requests" languagecode="1033" />
             </Descriptions>
             <statuses>
               <status value="1" state="0">
@@ -683,7 +683,7 @@
             <displayname description="Status Reason" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="Reason for the status of the Time Off Requests" languagecode="1033" />
+            <Description description="Reason for the status of the Time off requests" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="TimeZoneRuleVersionNumber">

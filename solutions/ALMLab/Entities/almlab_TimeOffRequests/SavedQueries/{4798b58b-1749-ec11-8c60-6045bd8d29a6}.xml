@@ -6,7 +6,7 @@
     <isquickfindquery>0</isquickfindquery>
     <isprivate>0</isprivate>
     <isdefault>1</isdefault>
-    <savedqueryid>{54b6bc0d-0e49-ec11-8c60-0022480ab1b1}</savedqueryid>
+    <savedqueryid>{4798b58b-1749-ec11-8c60-6045bd8d29a6}</savedqueryid>
     <querytype>8192</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical" output-format="xml-platform">
@@ -21,10 +21,10 @@
     </fetchxml>
     <IntroducedVersion>1.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="My Time Off Requests" languagecode="1033" />
+      <LocalizedName description="My Time off requests" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
-      <Description description="Active Time Off Requests owned by me" languagecode="1033" />
+      <Description description="Active Time off requests owned by me" languagecode="1033" />
     </Descriptions>
   </savedquery>
 </savedqueries>

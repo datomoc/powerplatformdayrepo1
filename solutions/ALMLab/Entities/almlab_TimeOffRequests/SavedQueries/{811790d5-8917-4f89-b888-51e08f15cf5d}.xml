@@ -6,7 +6,7 @@
     <isquickfindquery>0</isquickfindquery>
     <isprivate>0</isprivate>
     <isdefault>1</isdefault>
-    <savedqueryid>{020832de-01d5-4b0d-94df-14632b38e750}</savedqueryid>
+    <savedqueryid>{811790d5-8917-4f89-b888-51e08f15cf5d}</savedqueryid>
     <layoutxml>
       <grid name="resultset" jump="almlab_name" select="1" icon="1" preview="1">
         <row name="result" id="almlab_timeoffrequestsid">
@@ -28,7 +28,7 @@
     </fetchxml>
     <IntroducedVersion>1.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Time Off Requests Advanced Find View" languagecode="1033" />
+      <LocalizedName description="Time off requests Advanced Find View" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>
