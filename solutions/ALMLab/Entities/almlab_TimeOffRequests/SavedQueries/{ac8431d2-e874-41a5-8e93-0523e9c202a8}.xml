@@ -6,16 +6,16 @@
     <isquickfindquery>0</isquickfindquery>
     <isprivate>0</isprivate>
     <isdefault>1</isdefault>
-    <savedqueryid>{33a81c08-f784-43fb-9d8e-550cdc50d5ee}</savedqueryid>
+    <savedqueryid>{ac8431d2-e874-41a5-8e93-0523e9c202a8}</savedqueryid>
     <layoutxml>
-      <grid name="resultset" jump="almlab_name" select="1" icon="1" preview="1">
-        <row name="result" id="almlab_timeoffrequestsid">
+      <grid name="almlab_timeoffrequestses" jump="almlab_name" select="1" icon="1" preview="1">
+        <row name="almlab_timeoffrequests" id="almlab_timeoffrequestsid">
           <cell name="almlab_name" width="300" />
           <cell name="createdon" width="125" />
         </row>
       </grid>
     </layoutxml>
-    <querytype>0</querytype>
+    <querytype>2</querytype>
     <fetchxml>
       <fetch version="1.0" mapping="logical">
         <entity name="almlab_timeoffrequests">
@@ -31,7 +31,7 @@
     </fetchxml>
     <IntroducedVersion>1.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Active Time Off Requests" languagecode="1033" />
+      <LocalizedName description="Time off requests Associated View" languagecode="1033" />
     </LocalizedNames>
   </savedquery>
 </savedqueries>
