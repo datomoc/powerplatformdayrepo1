@@ -33,8 +33,8 @@ on:
 
 env:
 #edit your values here
-  BUILD_ENVIRONMENT_URL: org1e38c0e7.crm4.dynamics.com
-  PRODUCTION_ENVIRONMENT_URL: orgc1edf020.crm.dynamics.com
+  BUILD_ENVIRONMENT_URL: https://orge9acc9b0.crm.dynamics.com
+  PRODUCTION_ENVIRONMENT_URL: https://orgc1edf020.crm.dynamics.com
   USERNAME: admin@CRM339195.onmicrosoft.com
 
 
