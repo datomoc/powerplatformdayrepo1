@@ -26,7 +26,7 @@ on:
 
 env:
 #edit your values here
-  ENVIRONMENT_URL: https://org0a5f2a28.crm.dynamics.com
+  ENVIRONMENT_URL: org1e38c0e7.crm4.dynamics.com
   USERNAME: admin@CRM339195.onmicrosoft.com
 
 
